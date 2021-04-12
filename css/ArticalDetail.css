@@ -215,21 +215,23 @@ line-height: 1.5;
   line-height: 1.5;
   color: #5d512f;
 }
-.ArticalPicsMain img{
-  width: 100px;
-  height: 80px;
-}
+
 #large{
-  max-width: 200%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+width:100%;
   border-radius: 10px;
+}
+.img_group{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
 }
 .small{
-  width: 100%;
-  height: 100%;
+  width:100%;
   border-radius: 10px;
+  opacity: .5;
+}
+.small.active{
+  opacity: 1;
 }
 .ArticalContext{
   color: #5d512f;
