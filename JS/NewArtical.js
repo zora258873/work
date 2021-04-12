@@ -42,12 +42,12 @@ divStars.onclick = function (e) {
     e.target.src = "/Pic/star.png";
     var prev = e.target.previousElementSibling;
     while (prev) {
-      prev.src = "/Pic/star.png";
+      prev.src = "../Pic/star.png";
       prev = prev.previousElementSibling;
       }
     var next = e.target.nextElementSibling;
     while (next) {
-      next.src = "/Pic/star_solid.png";
+      next.src = "../Pic/star_solid.png";
       next = next.nextElementSibling;
     }
     var index = starArray.indexOf(e.target);

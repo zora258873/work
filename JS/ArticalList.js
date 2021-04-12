@@ -19,10 +19,10 @@ window.addEventListener('scroll', scrollshadow, false);
 //加入收藏 或 取消收藏
 function switchFavorite(e){
   if( e.currentTarget.alt =="Like" ){
-    e.currentTarget.src="/Pic/Like_red.png";
+    e.currentTarget.src="../Pic/Like_red.png";
     e.currentTarget.alt = "Unlike";
   } else {
-    e.currentTarget.src = "/Pic/Like_gray.png";
+    e.currentTarget.src = "../Pic/Like_gray.png";
     e.currentTarget.alt = "Like";
   }
 }

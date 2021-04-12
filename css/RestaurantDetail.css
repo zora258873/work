@@ -17,7 +17,7 @@ h2{
   margin: auto;
 }
 h2::before{
-  content:url(/Pic/Titleimg.png);
+  content:url(../Pic/Titleimg.png);
   /* background-color: #000; */
   /* background-image: url(/Pic/Titleimg.png); */
   display:inline-block;
