@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽元素:Before&After</title>
+  <style>
+    p{
+      background-color: #ccc;
+    }
+    p::before{
+      content: "there is before";
+    }
+    p::after{
+      content: "there is after";
+    }
+    h1{
+      text-align: center;
+    }
+    h1::after{
+      content : "";
+      width: 2em;
+      height: 2px;
+      background-color: #f00;
+      display:block;
+      /* 因為befor/after為inline特性, 所以要讓它變成block特性才可以設定寬高 */
+      margin: auto;
+    }
+
+    .submenu{
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+    }
+    li{
+      list-style: none;
+      /* 去前方標點 */
+      position: relative;
+    }
+    li a{
+      display: block;
+      padding: 10px 20px;
+    }
+    li + li:before{
+      /* 一只在後方空格加上一條1em高3px寬的紅色線 */
+      content: "";
+      display: block;
+      height: 1em;
+      width: 3px;
+      background-color: #f00;
+      position: absolute;
+      /* 下方為至中 */
+      top: 0px;
+      bottom: 0px;
+      margin: auto;
+    }
+  
+  </style>
+</head>
+<body>
+  <h1>After</h1>
+  <p>內容文字</p>
+
+  <div class="submenu">
+    <li><a href="#">link1</a></li>
+    <li><a href="#">link2</a></li>
+    <li><a href="#">link3</a></li>
+    <li><a href="#">link4</a></li>
+  </div>
+</body>
+</html>
